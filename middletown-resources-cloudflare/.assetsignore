@@ -1,0 +1,15 @@
+.git
+.git/**
+.wrangler
+.wrangler/**
+node_modules
+node_modules/**
+.DS_Store
+README.md
+SETUP.md
+schema.sql
+worker.js
+wrangler.jsonc
+package.json
+package-lock.json
+.assetsignore
