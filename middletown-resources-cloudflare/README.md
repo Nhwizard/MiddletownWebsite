@@ -11,3 +11,4 @@ This repository contains the public church website and a password-protected PDF 
 The site is designed for Cloudflare Workers with Static Assets, D1, and R2. See [SETUP.md](SETUP.md) for the deployment instructions.
 
 Never place the administrator password or session secret in this repository. Add both as encrypted Cloudflare secrets.
+Cloudflare deployment directory: /middletown-resources-cloudflare
