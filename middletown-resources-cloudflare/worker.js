@@ -250,7 +250,10 @@ async function uploadResource(request, env) {
   let uploaded;
 
   try {
-    uploaded = await env.PDFS.put(r2Key, validatedPdfStream(request.body), {
+    const pdfStream = validatedPdfStream(request.body)
+  .pipeThrough(new FixedLengthStream(declaredSize));
+
+uploaded = await env.PDFS.put(r2Key, pdfStream, {
       httpMetadata: {
         contentType: "application/pdf",
         contentDisposition: `inline; filename="${safeDownloadName(originalName)}"`,
